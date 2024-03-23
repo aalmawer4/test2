@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FFF7E6;
+}
+
+header {
+    background-color: #6F4E37;
+    color: #FFF7E6;
+    padding: 20px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    height: 50px; /* Adjust based on your logo's aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF7E6;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home {
+    background-image: url('image1.jpg'); /* Update with the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: red;
+    position: relative;
+}
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay as needed */
+    z-index: 1;
+}
+
+#menu {
+    background-image: url('image.jpg'); /* Adjust as necessary */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: yellowgreen;
+    position: relative;
+}
+#menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.menu-category h3, .menu-category ul {
+    position: relative;
+    z-index: 2;
+}
+
+#about { background-color: #FFF7E6; }
+#contact { background-color: #779655; color: #FFF7E6; }
+
+.menu-category h3 {
+    margin: 20px 0;
+}
+
+.menu-category ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.menu-category ul li {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #FFF7E6;
+    text-align: center;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    #logo {
+        height: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
